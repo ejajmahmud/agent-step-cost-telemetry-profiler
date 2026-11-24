@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-step-cost-telemetry-profiler"
+version = "0.1.0"
+description = "Granular per-step token consumption, API cost, and latency profiler for autonomous agent execution loops"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-step-cost-telemetry-profiler = "agent_step_cost_telemetry_profiler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_step_cost_telemetry_profiler*"]
